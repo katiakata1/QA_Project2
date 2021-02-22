@@ -11,5 +11,10 @@ def index():
 
     return render_template('base.html', spirit=spirit.text, volume = volume.text, mixer=mixer.text)
 
+@app.route('/list', methods=['GET', 'POST'])
+def list():
+    return render_template('list.html')
+
+
 if __name__=="__main__":
     app.run(port=5000, debug=True, host='0.0.0.0')
